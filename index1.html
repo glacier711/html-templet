@@ -30,51 +30,160 @@
   <style>
     :root {
       --theme-green: #006B3F;
-      --theme-green-light: #00FF7F;
-      --theme-green-dark: #00532F;
-      --theme-bg-light: #F8F9FA;
-      --theme-bg-gray: #F5F5F5;
+      --theme-green-light: #00C853;
+      --theme-green-dark: #004D29;
+      --theme-accent: #00E676;
+      --theme-bg-light: #F0FDF4;
+      --theme-bg-gray: #F8FAFC;
+      --theme-gradient: linear-gradient(135deg, #006B3F 0%, #00C853 100%);
+      --theme-gradient-hover: linear-gradient(135deg, #004D29 0%, #006B3F 100%);
     }
 
-    /* Header with green theme */
-    .header-main {
-      background-color: var(--theme-green) !important;
+    /* Smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
     }
-    
+
+    /* Header with enhanced green theme */
+    .header-main {
+      background: var(--theme-gradient) !important;
+      box-shadow: 0 4px 20px rgba(0, 107, 63, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
     .header-main .header-logo img {
       filter: brightness(0) invert(1);
+      max-height: 45px;
     }
 
     .main-menu ul li a {
       color: #FFFFFF !important;
+      font-weight: 500;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
     }
 
-    .main-menu ul li.menu-item-has-children > a::after {
-      border-top-color: #FFFFFF;
+    .main-menu ul li a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #FFFFFF;
     }
 
-    .header-cta span {
-      color: #FFFFFF !important;
-    }
-    
-    .side-toggle {
-      color: #FFFFFF !important;
-    }
-
-    /* Hero button */
+    /* Hero button with enhanced gradient */
     .rr-btn {
-      background: linear-gradient(135deg, var(--theme-green-light), var(--theme-green)) !important;
+      background: var(--theme-gradient) !important;
+      color: #FFFFFF !important;
+      border: none;
+      border-radius: 50px;
+      padding: 16px 40px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 8px 25px rgba(0, 107, 63, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
+    .rr-btn:hover {
+      background: var(--theme-gradient-hover) !important;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(0, 107, 63, 0.4);
+    }
+
+    .rr-btn .btn-wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Progress bar with gradient */
     .progress-bar {
-      background: linear-gradient(90deg, var(--theme-green-light), var(--theme-green)) !important;
+      background: var(--theme-gradient) !important;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 107, 63, 0.2);
+    }
+
+    /* Section styling */
+    .about-area {
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--theme-bg-light) 100%);
+    }
+
+    .service-area {
+      background-color: var(--theme-bg-light) !important;
+    }
+
+    /* Service cards */
+    .service-box {
+      background: #FFFFFF;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 107, 63, 0.08);
+      transition: all 0.4s ease;
+      border: 1px solid rgba(0, 107, 63, 0.1);
+    }
+
+    .service-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0, 107, 63, 0.15);
+    }
+
+    .service-box .thumb .service-logo {
+      background: var(--theme-gradient);
+      border-radius: 50%;
+      padding: 15px;
+    }
+
+    /* Section titles */
+    .section-title {
+      color: var(--theme-green) !important;
+      position: relative;
+    }
+
+    .section-subtitle {
+      color: var(--theme-green-light) !important;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Project cards */
+    .project-box {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s ease;
+    }
+
+    .project-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 107, 63, 0.2);
     }
 
     /* Pricing - Standard Plan Highlight */
     .price-box.standard {
-      background: var(--theme-green) !important;
+      background: var(--theme-gradient) !important;
+      border-radius: 24px;
+      transform: scale(1.05);
+      box-shadow: 0 25px 80px rgba(0, 107, 63, 0.35);
+      border: 3px solid var(--theme-accent);
     }
-    
+
+    .price-box.standard:hover {
+      transform: scale(1.08);
+    }
+
+    .price-box {
+      border-radius: 24px;
+      background: #FFFFFF;
+      box-shadow: 0 10px 40px rgba(0, 107, 63, 0.08);
+      transition: all 0.4s ease;
+    }
+
+    .price-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0, 107, 63, 0.15);
+    }
+
     .price-box.standard .price .value,
     .price-box.standard .package-name,
     .price-box.standard ul.feature-list li,
@@ -82,9 +191,237 @@
       color: #FFFFFF !important;
     }
 
+    .price-box .icon {
+      background: var(--theme-bg-light);
+      border-radius: 50%;
+      padding: 20px;
+      margin: 0 auto;
+    }
+
+    /* Testimonial cards */
+    .testimonial-item {
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 107, 63, 0.08);
+      border: 1px solid rgba(0, 107, 63, 0.1);
+    }
+
+    .testimonial-item .avatar {
+      border: 4px solid var(--theme-accent);
+      border-radius: 50%;
+    }
+
+    /* Team cards */
+    .team-box {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 107, 63, 0.1);
+      transition: all 0.4s ease;
+    }
+
+    .team-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0, 107, 63, 0.2);
+    }
+
+    .team-box .content {
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--theme-bg-light) 100%);
+    }
+
+    /* Blog cards */
+    .blog {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 107, 63, 0.08);
+      transition: all 0.4s ease;
+      background: #FFFFFF;
+    }
+
+    .blog:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 107, 63, 0.15);
+    }
+
+    .blog-featured {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 15px 50px rgba(0, 107, 63, 0.12);
+    }
+
+    /* Blog tag */
+    .blog .meta .tag {
+      background: var(--theme-gradient);
+      color: #FFFFFF;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .blog-btn {
+      color: var(--theme-green) !important;
+      font-weight: 600;
+    }
+
+    /* Process boxes */
+    .process-box {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 107, 63, 0.08);
+      transition: all 0.4s ease;
+    }
+
+    .process-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 107, 63, 0.15);
+    }
+
+    .process-box .thumb img {
+      background: var(--theme-gradient);
+      border-radius: 50%;
+      padding: 15px;
+    }
+
+    /* Feature boxes */
+    .feature-box {
+      background: var(--theme-bg-light);
+      border-radius: 16px;
+      padding: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-box:hover {
+      background: var(--theme-gradient);
+    }
+
+    .feature-box:hover .title,
+    .feature-box:hover .text {
+      color: #FFFFFF !important;
+    }
+
     /* Footer */
     .footer-area {
-      background-color: #1A1A1A !important;
+      background: linear-gradient(180deg, #1A1A1A 0%, #0D0D0D 100%) !important;
+    }
+
+    .footer-widget-title {
+      color: var(--theme-accent) !important;
+    }
+
+    .footer-social a {
+      background: var(--theme-gradient);
+      width: 45px;
+      height: 45px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #FFFFFF;
+      transition: all 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 107, 63, 0.4);
+    }
+
+    .footer-nav-list li a {
+      color: #A0A0A0;
+      transition: all 0.3s ease;
+    }
+
+    .footer-nav-list li a:hover {
+      color: var(--theme-accent);
+      padding-left: 10px;
+    }
+
+    /* Project tab buttons */
+    .nav-link {
+      color: #666;
+      border-radius: 30px;
+      padding: 12px 28px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link.active {
+      background: var(--theme-gradient);
+      color: #FFFFFF;
+    }
+
+    /* Hero slide tag */
+    .hero-slide-tag {
+      background: var(--theme-gradient);
+      color: #FFFFFF;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* Hero title span */
+    .hero-title span {
+      background: var(--theme-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Scroll to top button */
+    .progress-wrap {
+      background: var(--theme-gradient);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--theme-bg-light);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--theme-gradient);
+      border-radius: 5px;
+    }
+
+    /* Animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* Form inputs */
+    .appointment-formfield input,
+    .appointment-formfield select {
+      border: 2px solid rgba(0, 107, 63, 0.2);
+      border-radius: 12px;
+      padding: 18px 25px;
+      transition: all 0.3s ease;
+    }
+
+    .appointment-formfield input:focus,
+    .appointment-formfield select:focus {
+      border-color: var(--theme-green);
+      box-shadow: 0 0 20px rgba(0, 107, 63, 0.1);
+    }
+
+    /* Brand slider */
+    .brand-4-box img {
+      filter: grayscale(100%);
+      opacity: 0.5;
+      transition: all 0.3s ease;
+    }
+
+    .brand-4-box img:hover {
+      filter: grayscale(0%);
+      opacity: 1;
     }
   </style>
 
