@@ -1,712 +1,1311 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synvo Solutions - IT Services</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Egyriz Solutions - IT & Digital Marketing Services">
+
+  <title>Egyriz Solutions - IT & Digital Marketing</title>
+
+  <!-- Fav Icon -->
+  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.png">
+
+  <!-- Dependencies CSS Files -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome-pro.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/progressbar.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+
   <!-- Template Main CSS File -->
   <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/green-theme.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.ico">
+
+  <!-- Custom CSS for Egyriz Theme -->
+  <style>
+    :root {
+      --theme-green: #006B3F;
+      --theme-green-light: #00FF7F;
+      --theme-green-dark: #00532F;
+      --theme-bg-light: #F8F9FA;
+      --theme-bg-gray: #F5F5F5;
+    }
+
+    /* Header with green theme */
+    .header-main {
+      background-color: var(--theme-green) !important;
+    }
+    
+    .header-main .header-logo img {
+      filter: brightness(0) invert(1);
+    }
+
+    .main-menu ul li a {
+      color: #FFFFFF !important;
+    }
+
+    .main-menu ul li.menu-item-has-children > a::after {
+      border-top-color: #FFFFFF;
+    }
+
+    .header-cta span {
+      color: #FFFFFF !important;
+    }
+    
+    .side-toggle {
+      color: #FFFFFF !important;
+    }
+
+    /* Hero button */
+    .rr-btn {
+      background: linear-gradient(135deg, var(--theme-green-light), var(--theme-green)) !important;
+    }
+
+    .progress-bar {
+      background: linear-gradient(90deg, var(--theme-green-light), var(--theme-green)) !important;
+    }
+
+    /* Pricing - Standard Plan Highlight */
+    .price-box.standard {
+      background: var(--theme-green) !important;
+    }
+    
+    .price-box.standard .price .value,
+    .price-box.standard .package-name,
+    .price-box.standard ul.feature-list li,
+    .price-box.standard .text {
+      color: #FFFFFF !important;
+    }
+
+    /* Footer */
+    .footer-area {
+      background-color: #1A1A1A !important;
+    }
+  </style>
+
 </head>
-<body>
-    <!-- Discount Banner -->
-    <div class="discount-banner">
-        <div class="container">
-            <span>Sign Up and Receive upto 20% bonus discount on checkout</span>
-        </div>
+
+
+<body class="body-wrapper">
+
+  <div class="loader-wrap">
+    <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+      <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+    </svg>
+
+    <div class="loader-wrap-heading">
+      <div class="load-text">
+        <span>E</span>
+        <span>g</span>
+        <span>y</span>
+        <span>r</span>
+        <span>i</span>
+        <span>z</span>
+      </div>
     </div>
+  </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="#">MEDO</a>
-            </div>
-            
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            
-            <ul class="nav-menu">
-                <li><a href="#" class="nav-link active">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" class="nav-link">Pages <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Our Team</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">FAQs</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Managed IT Services</a></li>
-                        <li><a href="#">Software Development</a></li>
-                        <li><a href="#">Cloud Solutions</a></li>
-                        <li><a href="#">Cybersecurity</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="nav-link">Blog</a></li>
-                <li><a href="#" class="nav-link">Contact</a></li>
-                <li class="nav-cta"><a href="#" class="btn btn-primary">Get Started</a></li>
-            </ul>
+  <!-- Sroll to top -->
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+    </svg>
+  </div>
+
+  <!-- side toggle start -->
+  <aside class="fix">
+    <div class="side-info">
+      <div class="side-info-content">
+        <div class="offset-widget offset-header">
+          <div class="offset-logo">
+            <a href="index1.html">
+              <img src="assets/imgs/logo/logo.png" alt="site logo">
+            </a>
+          </div>
+          <button id="side-info-close" class="side-info-close">
+            <i class="fas fa-times"></i>
+          </button>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">YOU THINK WE BUILT YOUR VISION</h1>
-                    <h2 class="hero-subtitle">Elevating Your Business With Industry Experts</h2>
-                    <p class="hero-description">We are dedicated to building long-term partnerships with our clients, ensuring their success.</p>
-                    <div class="hero-buttons">
-                        <a href="#" class="btn btn-primary btn-large">Get Started Now</a>
-                        <a href="#" class="btn btn-secondary btn-large">Learn More</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-chart-line hero-icon"></i>
-                        <span>Business Growth Visualization</span>
-                    </div>
-                </div>
-            </div>
+        <div class="mobile-menu fix"></div>
+        <div class="offset-button">
+          <a href="contact.html" class="rr-btn">
+            <span class="btn-wrap">
+              <span class="text-one">Get Consultations</span>
+              <span class="text-two">Get Consultations</span>
+            </span>
+          </a>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">+ SERVICE WE OFFER</span>
-                <h2 class="section-title">Our Demanding Services</h2>
-                <p class="section-description">We provide comprehensive IT solutions tailored to your business needs.</p>
+        <div class="offset-widget-box">
+          <h2 class="title">Contact Us</h2>
+          <div class="contact-meta">
+            <div class="contact-item">
+              <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+              <span class="text">123 Business Park, Suite 500<br>San Francisco, CA 94107</span>
             </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Managed IT Services</h3>
-                    <p>Custom Software And Application Development Tailored To Business Needs.</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                    </div>
-                    <h3>Cloud Solutions</h3>
-                    <p>Move your organization's services from on-premise platform to cloud (AWS, Azure, Google Cloud).</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Cybersecurity</h3>
-                    <p>Protect your business from threats with our comprehensive security solutions.</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <h3>Data Analytics</h3>
-                    <p>Transform your data into actionable insights with our analytics solutions.</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
+            <div class="contact-item">
+              <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+              <span class="text"><a href="mailto:info@egyriz.com">info@egyriz.com</a></span>
             </div>
+            <div class="contact-item">
+              <span class="icon"><i class="fa-solid fa-phone"></i></span>
+              <span class="text"><a href="">+1 (555) 987-6543</a></span>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </aside>
+  <div class="offcanvas-overlay"></div>
+  <!-- side toggle end -->
 
-    <!-- Projects Section -->
-    <section class="projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">+ OUR PROJECTS</span>
-                <h2 class="section-title">Showcase Of Our Recognized Work</h2>
-                <p class="section-description">Explore our successful projects across various industries.</p>
+  <div class="has-smooth" id="has_smooth"></div>
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <!-- Header area start -->
+      <header class="header-area">
+        <div class="header-main">
+          <div class="container rr-container-1350">
+            <div class="header-main-inner">
+              <div class="header-logo">
+                <a href="index1.html">
+                  <img src="assets/imgs/logo/logo-light.png" class="normal-logo" alt="Site Logo">
+                </a>
+              </div>
+              <div class="header-nav">
+                <nav class="main-menu">
+                  <ul>
+                    <li><a href="index1.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="projects.html">Portfolio</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="header-cta">
+                <a href="contact.html" class="rr-btn">
+                  <span class="btn-wrap">
+                    <span class="text-one">Appointment</span>
+                    <span class="text-two">Appointment</span>
+                  </span>
+                </a>
+              </div>
+              <div class="header-offfcanvas">
+                <button class="side-toggle">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+              </div>
             </div>
-            
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All Cases</button>
-                <button class="filter-btn" data-filter="business">Business</button>
-                <button class="filter-btn" data-filter="it">IT Solution</button>
-                <button class="filter-btn" data-filter="startup">Startup</button>
-                <button class="filter-btn" data-filter="marketing">Marketing</button>
-            </div>
-            
-            <div class="projects-grid">
-                <div class="project-card" data-category="it">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Digital IT Solution</h3>
-                        <p>Move an organization's services from on-premise platform to cloud (AWS, Azure, Google Cloud).</p>
-                        <a href="#" class="project-link">View Case Study <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="business">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-building"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Enterprise System Upgrade</h3>
-                        <p>Modernized legacy systems for improved efficiency and scalability.</p>
-                        <a href="#" class="project-link">View Case Study <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="startup">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Startup Tech Stack</h3>
-                        <p>Complete technology infrastructure for a fast-growing startup.</p>
-                        <a href="#" class="project-link">View Case Study <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="marketing">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-bullhorn"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Marketing Analytics Platform</h3>
-                        <p>Advanced analytics for optimizing marketing campaigns and ROI.</p>
-                        <a href="#" class="project-link">View Case Study <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
+      </header>
+      <!-- Header area end -->
 
-    <!-- Business Growth Section -->
-    <section class="growth">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">+ BUSINESS GROWTH</span>
-                <h2 class="section-title">Connecting People And Build Technology</h2>
-                <p class="section-description">Energistically evisculate an expanded array of meta-services after cross-media strategic theme areas.</p>
-            </div>
-            
-            <div class="growth-content">
-                <div class="growth-text">
-                    <p>Interactively simplify interactive customer service before fully tested relationship parallel task high standard.</p>
-                    
-                    <div class="growth-stats">
-                        <div class="stat-item">
-                            <div class="stat-header">
-                                <h4>Business Security</h4>
-                                <span class="stat-percent">65%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 65%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="stat-item">
-                            <div class="stat-header">
-                                <h4>Career Development</h4>
-                                <span class="stat-percent">80%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="stat-item">
-                            <div class="stat-header">
-                                <h4>Business Innovation</h4>
-                                <span class="stat-percent">75%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 75%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="growth-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-chart-bar growth-icon"></i>
-                        <span>Business Growth Analytics</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <main>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">+ CUSTOMER FEEDBACKS</span>
-                <h2 class="section-title">Hear From Our Happy Customers</h2>
-                <p class="section-description">See what our clients say about working with us.</p>
+        <!-- hero area start -->
+        <section class="hero-area">
+          <div class="hero-area-inner">
+            <div class="slide-button-bg">
+              <img class="left-btn-bg" src="assets/imgs/shape/shape-26.webp" alt="image">
+              <img class="right-btn-bg" src="assets/imgs/shape/shape-27.webp" alt="image">
             </div>
-            
-            <div class="testimonials-slider">
-                <div class="testimonial-card active">
-                    <div class="testimonial-content">
-                        <div class="quote-icon">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p class="testimonial-text">"Working With Synvo Has Transformed How We Operate. Their Team Helped Us Migrate To The Cloud Seamlessly And Provided Top-Notch Support Every Step Of The Way!"</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="author-info">
-                                <h4>Benjamin Clarke</h4>
-                                <p>CTO, TechCorp Inc.</p>
-                            </div>
-                        </div>
+            <div class="swiper slider-active">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="hero-slide">
+                    <div class="hero-slide-bg">
+                      <img src="assets/imgs/gallery/gallery-1.webp" alt="image">
                     </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="quote-icon">
-                            <i class="fas fa-quote-left"></i>
+                    <span class="hero-slide-tag">IT Solutions</span>
+                    <div class="container rr-container-1410">
+                      <div class="hero-content">
+                        <div class="hero-title-wrapper">
+                          <div class="title-wrapper" data-animation="fadeInUp" data-delay=".6s">
+                            <h1 class="hero-title">Elevating Your Business With <span>Industry Experts</span></h1>
+                          </div>
                         </div>
-                        <p class="testimonial-text">"The team at Synvo delivered exceptional results. Their custom software solution has improved our operational efficiency by 40%."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="author-info">
-                                <h4>Sarah Johnson</h4>
-                                <p>CEO, InnovateCo</p>
-                            </div>
+                        <div class="text-wrapper" data-animation="fadeInUp" data-delay=".9s">
+                          <p class="text">We are dedicated to building long-term partnerships with our clients, ensuring their success through innovative IT and digital marketing solutions.</p>
                         </div>
+                        <div class="btn-wrapper" data-animation="fadeInUp" data-delay="1.2s">
+                          <a href="contact.html" class="rr-btn">
+                            <span class="btn-wrap">
+                              <span class="text-one">Get Consultations</span>
+                              <span class="text-two">Get Consultations</span>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="quote-icon">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p class="testimonial-text">"Their cybersecurity services protected us from a major breach. Professional, responsive, and highly skilled team."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="author-info">
-                                <h4>Michael Rodriguez</h4>
-                                <p>IT Director, Global Finance</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="slider-controls">
-                    <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-                    <div class="slider-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
-                </div>
+              </div>
             </div>
-        </div>
-    </section>
+            <div class="hero-nav">
+              <div class="slider-button-prev hero-nav-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+              </div>
+              <div class="slider-button-next hero-nav-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- hero area end -->
 
-    <!-- Process Section -->
-    <section class="process">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">+ OUR WORK PROCESS</span>
-                <h2 class="section-title">We Are Building Great Future Together, Be With Us</h2>
-                <p class="section-description">Our proven process ensures successful project delivery and client satisfaction.</p>
+        <!-- about area start -->
+        <section class="about-area">
+          <div class="container rr-container-1410">
+            <div class="about-area-inner section-spacing">
+              <div class="about-thumb-wrappper fade-anim" data-direction="left">
+                <div class="about-thumb-1 img-reveal-anim">
+                  <img src="assets/imgs/gallery/gallery-2.webp" alt="image">
+                </div>
+                <div class="about-thumb-content-wrapper">
+                  <div class="about-thumb-2" data-speed="0.9">
+                    <img src="assets/imgs/gallery/gallery-3.webp" alt="image">
+                  </div>
+                </div>
+              </div>
+              <div class="about-content fade-anim" data-direction="right">
+                <div class="section-title-wrapper">
+                  <div class="title-wrapper">
+                    <h2 class="section-title">Make Sure Your Objectives Improves Profit Drivers</h2>
+                  </div>
+                </div>
+                <div class="text-wrapper">
+                  <p class="text">We envision a future where our clients are at the forefront of their industries, setting new standards of excellence through the transformative power of our consulting services.</p>
+                </div>
+                <div class="features-wrapper-box">
+                  <div class="features-wrapper">
+                    <div class="feature-box">
+                      <div class="thumb">
+                        <img src="assets/imgs/icon/icon-22.webp" alt="image">
+                      </div>
+                      <div class="content">
+                        <h3 class="title">Business Strategy and Growth</h3>
+                        <p class="text">Strategic planning and execution to drive sustainable business growth.</p>
+                      </div>
+                    </div>
+                    <div class="feature-box">
+                      <div class="thumb">
+                        <img src="assets/imgs/icon/icon-23.webp" alt="image">
+                      </div>
+                      <div class="content">
+                        <h3 class="title">Digital Marketing Solutions</h3>
+                        <p class="text">Comprehensive digital marketing strategies for online success.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-wrapper">
+                  <a href="contact.html" class="rr-btn">
+                    <span class="btn-wrap">
+                      <span class="text-one">Get Consultations <i class="fa-solid fa-arrow-right"></i></span>
+                      <span class="text-two">Get Consultations <i class="fa-solid fa-arrow-right"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
             </div>
-            
-            <div class="process-steps">
-                <div class="step-card">
-                    <div class="step-number">01</div>
-                    <div class="step-icon">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
-                    <h3>Business Planning</h3>
-                    <p>Conduct A Comprehensive Analysis Of The Business's Current State, Identifying Strengths, Weaknesses, Opportunities, And Threats.</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">02</div>
-                    <div class="step-icon">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
-                    <h3>Marketing And Branding</h3>
-                    <p>Develop A Strategic Marketing Plan To Enhance Brand Visibility And Reach Target Audiences Effectively.</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">03</div>
-                    <div class="step-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Final Result</h3>
-                    <p>Implement Solutions And Monitor Performance To Ensure Business Objectives Are Met And Success Is Achieved.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+          </div>
+        </section>
+        <!-- about area end -->
 
-    <!-- Appointment Section -->
-    <section class="appointment">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">+ BOOK APPOINTMENT HERE</span>
-                <h2 class="section-title">Empower Your Business With Synvo Solutions</h2>
-                <p class="section-description">Get in touch with our experts to discuss how we can help your business grow.</p>
-            </div>
-            
-            <div class="appointment-form">
-                <form id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                        </div>
+        <!-- service area start -->
+        <section class="service-area" style="background-color: var(--theme-bg-light);">
+          <div class="container rr-container-1410">
+            <div class="service-area-inner section-spacing">
+              <div class="service-header fade-anim">
+                <div class="section-title-wrapper">
+                  <div class="title-wrapper">
+                    <h2 class="section-title">Our Demanding Services</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="services-wrapper-box">
+                <div class="services-wrapper">
+                  <div class="service-box fade-anim">
+                    <div class="thumb">
+                      <div class="service-logo">
+                        <img src="assets/imgs/icon/icon-1.webp" alt="image">
+                      </div>
+                      <a class="service-btn" href="service-details.html">
+                        <span class="btn-text">Read More</span>
+                        <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                      </a>
+                      <a href="service-details.html"> <img class="main-img" src="assets/imgs/service/service-1.webp"
+                          alt="image"></a>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="service">Select Service Category</label>
-                        <select id="service" name="service" required>
-                            <option value="" disabled selected>Choose a service</option>
-                            <option value="it-services">Managed IT Services</option>
-                            <option value="cloud">Cloud Solutions</option>
-                            <option value="security">Cybersecurity</option>
-                            <option value="development">Software Development</option>
-                            <option value="analytics">Data Analytics</option>
+                    <div class="content">
+                      <h3 class="title"><a href="service-details.html">Business Strategy and Growth</a></h3>
+                      <p class="text">Strategic planning and execution for sustainable business growth.</p>
+                    </div>
+                  </div>
+                  <div class="service-box fade-anim">
+                    <div class="thumb">
+                      <div class="service-logo">
+                        <img src="assets/imgs/icon/icon-2.webp" alt="image">
+                      </div>
+                      <a class="service-btn" href="service-details.html">
+                        <span class="btn-text">Read More</span>
+                        <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                      </a>
+                      <a href="service-details.html"><img class="main-img" src="assets/imgs/service/service-2.webp"
+                          alt="image"></a>
+                    </div>
+                    <div class="content">
+                      <h3 class="title"><a href="service-details.html">Digital Marketing Solutions</a></h3>
+                      <p class="text">Comprehensive digital marketing strategies for online success.</p>
+                    </div>
+                  </div>
+                  <div class="service-box fade-anim">
+                    <div class="thumb">
+                      <div class="service-logo">
+                        <img src="assets/imgs/icon/icon-3.webp" alt="image">
+                      </div>
+                      <a class="service-btn" href="service-details.html">
+                        <span class="btn-text">Read More</span>
+                        <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                      </a>
+                      <a href="service-details.html"><img class="main-img" src="assets/imgs/service/service-3.webp"
+                          alt="image"></a>
+                    </div>
+                    <div class="content">
+                      <h3 class="title"><a href="service-details.html">Website and Email Marketing</a></h3>
+                      <p class="text">Professional website development and effective email campaigns.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- service area end -->
+
+        <!-- Digital IT Solution section -->
+        <section class="service-area">
+          <div class="service-area-bg">
+            <img src="assets/imgs/gallery/gallery-4.webp" alt="image">
+          </div>
+          <div class="container rr-container-1410">
+            <div class="service-area-inner section-spacing">
+              <div class="service-header fade-anim">
+                <div class="section-title-wrapper">
+                  <div class="title-wrapper">
+                    <h2 class="section-title">Digital IT Solution</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="services-wrapper-box">
+                <div class="services-wrapper">
+                  <div class="service-box fade-anim">
+                    <div class="thumb">
+                      <div class="service-logo">
+                        <img src="assets/imgs/icon/icon-4.webp" alt="image">
+                      </div>
+                      <a class="service-btn" href="service-details.html">
+                        <span class="btn-text">Read More</span>
+                        <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                      </a>
+                      <a href="service-details.html"> <img class="main-img" src="assets/imgs/service/service-1.webp"
+                          alt="image"></a>
+                    </div>
+                    <div class="content">
+                      <h3 class="title"><a href="service-details.html">Cloud Solutions</a></h3>
+                      <p class="text">Scalable cloud infrastructure and migration services.</p>
+                    </div>
+                  </div>
+                  <div class="service-box fade-anim">
+                    <div class="thumb">
+                      <div class="service-logo">
+                        <img src="assets/imgs/icon/icon-5.webp" alt="image">
+                      </div>
+                      <a class="service-btn" href="service-details.html">
+                        <span class="btn-text">Read More</span>
+                        <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                      </a>
+                      <a href="service-details.html"><img class="main-img" src="assets/imgs/service/service-2.webp"
+                          alt="image"></a>
+                    </div>
+                    <div class="content">
+                      <h3 class="title"><a href="service-details.html">Cybersecurity</a></h3>
+                      <p class="text">Protect your business with advanced security solutions.</p>
+                    </div>
+                  </div>
+                  <div class="service-box fade-anim">
+                    <div class="thumb">
+                      <div class="service-logo">
+                        <img src="assets/imgs/icon/icon-6.webp" alt="image">
+                      </div>
+                      <a class="service-btn" href="service-details.html">
+                        <span class="btn-text">Read More</span>
+                        <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                      </a>
+                      <a href="service-details.html"><img class="main-img" src="assets/imgs/service/service-3.webp"
+                          alt="image"></a>
+                    </div>
+                    <div class="content">
+                      <h3 class="title"><a href="service-details.html">Software Development</a></h3>
+                      <p class="text">Custom software solutions tailored to your needs.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- project area start -->
+        <section class="project-area">
+          <div class="container rr-container-1410">
+            <div class="project-area-inner section-spacing-top">
+              <div class="project-header fade-anim">
+                <div class="section-title-wrapper">
+                  <div class="title-wrapper">
+                    <h2 class="section-title">Showcase Of Our Recognized Work</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="project-wrapper-box fade-anim">
+                <div class="project-tab">
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="b1-tab" data-bs-toggle="tab" data-bs-target="#b1-tab-pane"
+                        type="button" role="tab" aria-controls="b1-tab-pane" aria-selected="true">
+                        <span class="tab-btn">All Works</span>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="b2-tab" data-bs-toggle="tab" data-bs-target="#b2-tab-pane"
+                        type="button" role="tab" aria-controls="b2-tab-pane" aria-selected="false">
+                        <span class="tab-btn">Digital</span>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="b3-tab" data-bs-toggle="tab" data-bs-target="#b3-tab-pane"
+                        type="button" role="tab" aria-controls="b3-tab-pane" aria-selected="false">
+                        <span class="tab-btn">Marketing</span>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="b4-tab" data-bs-toggle="tab" data-bs-target="#b4-tab-pane"
+                        type="button" role="tab" aria-controls="b4-tab-pane" aria-selected="false">
+                        <span class="tab-btn">SEO</span>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="b1-tab-pane" role="tabpanel" aria-labelledby="b1-tab"
+                      tabindex="0">
+                      <div class="project-wrapper">
+                        <div class="swiper project-active">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="project-box">
+                                <div class="thumb">
+                                  <a href="project-details.html"><img src="assets/imgs/project/project-2.webp"
+                                      alt="image"></a>
+                                </div>
+                                <div class="content-wrapper">
+                                  <div class="content">
+                                    <h3 class="title"><a href="project-details.html">Digital IT Solution</a></h3>
+                                    <a href="project-details.html" class="rr-btn">
+                                      <span class="btn-wrap">
+                                        <span class="text-one">Read More</span>
+                                        <span class="text-two">Read More</span>
+                                      </span>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="project-box">
+                                <div class="thumb">
+                                  <a href="project-details.html"><img src="assets/imgs/project/project-3.webp"
+                                      alt="image"></a>
+                                </div>
+                                <div class="content-wrapper">
+                                  <div class="content">
+                                    <h3 class="title"><a href="project-details.html">Digital IT Solution</a></h3>
+                                    <a href="project-details.html" class="rr-btn">
+                                      <span class="btn-wrap">
+                                        <span class="text-one">Read More</span>
+                                        <span class="text-two">Read More</span>
+                                      </span>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="project-box">
+                                <div class="thumb">
+                                  <a href="project-details.html"><img src="assets/imgs/project/project-4.webp"
+                                      alt="image"></a>
+                                </div>
+                                <div class="content-wrapper">
+                                  <div class="content">
+                                    <h3 class="title"><a href="project-details.html">Digital IT Solution</a></h3>
+                                    <a href="project-details.html" class="rr-btn">
+                                      <span class="btn-wrap">
+                                        <span class="text-one">Read More</span>
+                                        <span class="text-two">Read More</span>
+                                      </span>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="project-box">
+                                <div class="thumb">
+                                  <a href="project-details.html"><img src="assets/imgs/project/project-1.webp"
+                                      alt="image"></a>
+                                </div>
+                                <div class="content-wrapper">
+                                  <div class="content">
+                                    <h3 class="title"><a href="project-details.html">Digital IT Solution</a></h3>
+                                    <a href="project-details.html" class="rr-btn">
+                                      <span class="btn-wrap">
+                                        <span class="text-one">Read More</span>
+                                        <span class="text-two">Read More</span>
+                                      </span>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- project area end -->
+
+        <!-- progress area start -->
+        <section class="progress-area">
+          <div class="container rr-container-1350">
+            <div class="progress-area-inner section-spacing">
+              <div class="progress-thumb-wrappper fade-anim" data-direction="left">
+                <div class="progress-thumb-1 img-reveal-anim">
+                  <img src="assets/imgs/gallery/gallery-5.webp" alt="image">
+                </div>
+                <div class="progress-thumb-2 img-reveal-anim">
+                  <img src="assets/imgs/gallery/gallery-6.webp" alt="image">
+                </div>
+                <div class="progress-thumb-3">
+                  <img class="img-reveal-anim" src="assets/imgs/gallery/gallery-7.webp" alt="image">
+                </div>
+              </div>
+              <div class="progress-content fade-anim" data-direction="right">
+                <div class="section-title-wrapper">
+                  <div class="title-wrapper">
+                    <h2 class="section-title">Connecting People And Build Technology</h2>
+                  </div>
+                </div>
+                <div class="text-wrapper">
+                  <p class="text">Energistically evisculate an expanded array of meta-services after cross-media strategic theme areas.</p>
+                </div>
+                <div class="progress-wrapper-box">
+                  <div class="progress-wrapper">
+                    <div class="progress-box">
+                      <div class="progress-title">
+                        <h3 class="progress-category">Web Development</h3>
+                        <span>84%</span>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar wow slideInLeft" role="progressbar" style="width: 84%"
+                          aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                    <div class="progress-box">
+                      <div class="progress-title">
+                        <h3 class="progress-category">Mobile Application</h3>
+                        <span>76%</span>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar wow slideInLeft" role="progressbar" style="width: 76%"
+                          aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                    <div class="progress-box">
+                      <div class="progress-title">
+                        <h3 class="progress-category">Digital Marketing</h3>
+                        <span>92%</span>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar wow slideInLeft" role="progressbar" style="width: 92%"
+                          aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- progress area end -->
+
+        <!-- testimonial area start -->
+        <section class="testimonial-area">
+          <div class="testimonial-area-bg">
+            <img src="assets/imgs/shape/shape-4.webp" alt="image">
+          </div>
+          <div class="container rr-container-1410">
+            <div class="testimonial-area-inner section-spacing-top">
+              <div class="testimonial-header fade-anim">
+                <div class="section-title-wrapper">
+                  <div class="title-wrapper">
+                    <h2 class="section-title">Hear From Our Happy Customers</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-wrapper-box section-spacing-bottom fade-anim">
+            <div class="testimonial-wrapper">
+              <div class="swiper testimonial-active">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="testimonial-item">
+                      <div class="content">
+                        <div class="author">
+                          <div class="avatar">
+                            <img src="assets/imgs/client/client-1.webp" alt="image">
+                          </div>
+                          <div class="meta">
+                            <h3 class="name">Benjamin Lewis</h3>
+                            <span class="post">CEO, Tech Solutions</span>
+                          </div>
+                        </div>
+                        <div class="text-wrapper">
+                          <p class="text">"Egyriz Solutions transformed our digital presence completely. Their expertise in IT and marketing helped us achieve remarkable growth!"</p>
+                        </div>
+                        <div class="icon-n-rating">
+                          <div class="rating">
+                            <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonial-item">
+                      <div class="content">
+                        <div class="author">
+                          <div class="avatar">
+                            <img src="assets/imgs/client/client-2.webp" alt="image">
+                          </div>
+                          <div class="meta">
+                            <h3 class="name">Alejandra Crate</h3>
+                            <span class="post">Marketing Director, Innovate Co</span>
+                          </div>
+                        </div>
+                        <div class="text-wrapper">
+                          <p class="text">"The team at Egyriz is exceptional. Their strategic approach and technical expertise exceeded our expectations!"</p>
+                        </div>
+                        <div class="icon-n-rating">
+                          <div class="rating">
+                            <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- testimonial area end -->
+
+        <!-- process area start -->
+        <section class="process-area">
+          <div class="container rr-container-1410">
+            <div class="process-area-inner section-spacing">
+              <div class="process-header fade-anim">
+                <div class="section-title-wrapper">
+                  <div class="title-wrapper">
+                    <h2 class="section-title">We Are Building Great Future Together With Us</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="process-wrapper-box fade-anim">
+                <div class="process-wrapper">
+                  <div class="process-box">
+                    <div class="thumb">
+                      <img src="assets/imgs/icon/icon-5.webp" alt="image">
+                    </div>
+                    <div class="content">
+                      <h3 class="title">Strategic Planning</h3>
+                      <p class="text">Comprehensive business analysis and strategic planning for success.</p>
+                    </div>
+                  </div>
+                  <div class="process-box">
+                    <img class="shape-start" src="assets/imgs/shape/shape-2.webp" alt="image">
+                    <img class="shape-end" src="assets/imgs/shape/shape-2.webp" alt="image">
+                    <div class="thumb">
+                      <img src="assets/imgs/icon/icon-6.webp" alt="image">
+                    </div>
+                    <div class="content">
+                      <h3 class="title">Marketing Outstanding</h3>
+                      <p class="text">Outstanding marketing strategies that drive results.</p>
+                    </div>
+                  </div>
+                  <div class="process-box">
+                    <div class="thumb">
+                      <img src="assets/imgs/icon/icon-7.webp" alt="image">
+                    </div>
+                    <div class="content">
+                      <h3 class="title">Development</h3>
+                      <p class="text">Expert development solutions for your business needs.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- process area end -->
+
+        <!-- appointment area start -->
+        <section class="appointment-area">
+          <div class="appointment-area-bg">
+            <img src="assets/imgs/shape/shape-5.webp" alt="image">
+          </div>
+          <div class="container rr-container-1410">
+            <div class="appointment-area-inner">
+              <div class="appointment-content section-spacing fade-anim" data-direction="left">
+                <div class="section-title-wrapper">
+                  <div class="title-wrapper">
+                    <h2 class="section-title">Empower Your Business <br>With Egyriz Solutions</h2>
+                  </div>
+                </div>
+                <div class="appointment-contact-wrap">
+                  <form action="#">
+                    <div class="appointment-formwrap">
+                      <div class="appointment-formfield">
+                        <input type="text" name="Name" id="Name" placeholder="Your Name">
+                        <i class="fa-regular fa-user"></i>
+                      </div>
+                      <div class="appointment-formfield">
+                        <input type="text" name="Email" id="Email" placeholder="Email Address">
+                        <i class="fa-regular fa-envelope"></i>
+                      </div>
+                      <div class="appointment-formfield span-2">
+                        <select name="category" id="category">
+                          <option value="Select Service Category" selected disabled>Select Service Category</option>
+                          <option value="IT Service">IT Service</option>
+                          <option value="Digital Marketing">Digital Marketing</option>
+                          <option value="Business Strategy">Business Strategy</option>
+                          <option value="Web Development">Web Development</option>
+                          <option value="SEO">SEO</option>
                         </select>
+                        <i class="fa-solid fa-angle-down"></i>
+                      </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project or requirements"></textarea>
+                    <div class="submit-btn">
+                      <button type="submit" class="rr-btn">
+                        <span class="btn-wrap">
+                          <span class="text-one">Get Consultations</span>
+                          <span class="text-two">Get Consultations</span>
+                        </span>
+                      </button>
                     </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-large btn-block">Book Appointment Now</button>
+                  </form>
+                </div>
+              </div>
+              <div class="appointment-thumb-wrappper fade-anim" data-direction="right">
+                <div class="appointment-thumb-1">
+                </div>
+                <div class="appointment-thumb-2">
+                  <img src="assets/imgs/shape/shape-3.webp" alt="image">
+                </div>
+                <div class="appointment-thumb-3 img-reveal-anim">
+                  <img src="assets/imgs/gallery/gallery-8.webp" alt="image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- appointment area end -->
+
+        <!-- team area start -->
+        <section class="team-area">
+          <div class="container rr-container-1410">
+            <div class="team-area-inner section-spacing">
+              <div class="team-header fade-anim">
+                <div class="section-title-wrapper">
+                  <div class="title-wrapper">
+                    <h2 class="section-title">Modernize Your IT, Maximize Your <br>Business Potential</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="team-wrapper-box">
+                <div class="team-wrapper">
+                  <div class="team-box fade-anim">
+                    <div class="thumb">
+                      <div class="social">
+                        <div class="social-link">
+                          <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                          <a href="https://x.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+                          <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="bg-shape"></div>
+                        <span class="share-icon"><i class="fa-regular fa-share-nodes"></i></span>
+                      </div>
+                      <a href="team-details.html">
+                        <img src="assets/imgs/team/team-1.webp" alt="image">
+                      </a>
+                    </div>
+                    <div class="content">
+                      <h3 class="name"><a href="team-details.html">Alex Martin</a></h3>
+                      <span class="post">CEO & Founder</span>
+                    </div>
+                  </div>
+                  <div class="team-box fade-anim">
+                    <div class="thumb">
+                      <div class="social">
+                        <div class="social-link">
+                          <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                          <a href="https://x.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+                          <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="bg-shape"></div>
+                        <span class="share-icon"><i class="fa-regular fa-share-nodes"></i></span>
+                      </div>
+                      <a href="team-details.html">
+                        <img src="assets/imgs/team/team-2.webp" alt="image">
+                      </a>
+                    </div>
+                    <div class="content">
+                      <h3 class="name"><a href="team-details.html">Mellissa Stone</a></h3>
+                      <span class="post">Marketing Lead</span>
+                    </div>
+                  </div>
+                  <div class="team-box fade-anim">
+                    <div class="thumb">
+                      <div class="social">
+                        <div class="social-link">
+                          <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                          <a href="https://x.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+                          <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="bg-shape"></div>
+                        <span class="share-icon"><i class="fa-regular fa-share-nodes"></i></span>
+                      </div>
+                      <a href="team-details.html">
+                        <img src="assets/imgs/team/team-3.webp" alt="image">
+                      </a>
+                    </div>
+                    <div class="content">
+                      <h3 class="name"><a href="team-details.html">Thomas Walkar</a></h3>
+                      <span class="post">Consultant</span>
+                    </div>
+                  </div>
+                  <div class="team-box fade-anim">
+                    <div class="thumb">
+                      <div class="social">
+                        <div class="social-link">
+                          <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                          <a href="https://x.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+                          <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="bg-shape"></div>
+                        <span class="share-icon"><i class="fa-regular fa-share-nodes"></i></span>
+                      </div>
+                      <a href="team-details.html">
+                        <img src="assets/imgs/team/team-4.webp" alt="image">
+                      </a>
+                    </div>
+                    <div class="content">
+                      <h3 class="name"><a href="team-details.html">Danielle Smith</a></h3>
+                      <span class="post">Web Developer</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- team area end -->
+
+        <!-- pricing-area start -->
+        <div class="pricing-area">
+          <div class="pricing-area-bg">
+            <img src="assets/imgs/shape/shape-28.webp" alt="image">
+          </div>
+          <div class="container rr-container-1410">
+            <div class="pricing-area-inner section-spacing-top">
+              <div class="area-shape-1">
+                <img src="assets/imgs/shape/shape-29.webp" alt="image">
+              </div>
+              <div class="area-shape-2">
+                <img src="assets/imgs/shape/shape-30.webp" alt="image" data-speed="0.7">
+              </div>
+              <div class="pricing-header fade-anim">
+                <div class="section-title-wrapper">
+                  <div class="title-wrapper">
+                    <h2 class="section-title">Affordable Pricing Packages</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="pricing-wrapper-box">
+                <div class="pricing-wrapper">
+                  <div class="price-box bordered fade-anim">
+                    <span class="package-tag">Basic Plan</span>
+                    <div class="icon">
+                      <img src="assets/imgs/icon/icon-34.webp" alt="image">
+                    </div>
+                    <p class="package-name">Basic Plan</p>
+                    <span class="price"><span class="value">$1,000</span>/month</span>
+                    <p class="text">Billed Annually</p>
+                    <ul class="feature-list">
+                      <li>Social Media Management</li>
+                      <li>8 Monthly Social Media Posts</li>
+                      <li>SEO Strategy & Keyword Research</li>
+                      <li>Monthly Analytics Report</li>
+                      <li>Email Support</li>
+                    </ul>
+                    <div class="btn-wrapper">
+                      <a href="contact.html" class="rr-btn">
+                        <span class="btn-wrap">
+                          <span class="text-one">Get Started</span>
+                          <span class="text-two">Get Started</span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="price-box standard fade-anim">
+                    <span class="package-tag" style="background: var(--theme-green-light); color: var(--theme-green-dark);">Most Popular</span>
+                    <div class="area-bg">
+                      <img src="assets/imgs/shape/shape-24.webp" alt="image">
+                    </div>
+                    <div class="icon">
+                      <img src="assets/imgs/icon/icon-35.webp" alt="image">
+                    </div>
+                    <p class="package-name">Standard Plan</p>
+                    <span class="price"><span class="value">$7,400</span>/month</span>
+                    <p class="text">Billed Annually</p>
+                    <ul class="feature-list">
+                      <li>Everything in Basic</li>
+                      <li>16 Monthly Social Media Posts</li>
+                      <li>Advanced SEO & Analytics</li>
+                      <li>Content Marketing Strategy</li>
+                      <li>Priority Support</li>
+                      <li>Bi-Weekly Strategy Calls</li>
+                    </ul>
+                    <div class="btn-wrapper">
+                      <a href="contact.html" class="rr-btn" style="background: #FFFFFF; color: var(--theme-green);">
+                        <span class="btn-wrap">
+                          <span class="text-one">Get Started</span>
+                          <span class="text-two">Get Started</span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="price-box bordered fade-anim">
+                    <span class="package-tag">Premium Plan</span>
+                    <div class="icon">
+                      <img src="assets/imgs/icon/icon-36.webp" alt="image">
+                    </div>
+                    <p class="package-name">Premium Plan</p>
+                    <span class="price"><span class="value">$8,600</span>/month</span>
+                    <p class="text">Billed Annually</p>
+                    <ul class="feature-list">
+                      <li>Everything in Standard</li>
+                      <li>Unlimited Social Media Posts</li>
+                      <li>Full-Service Digital Marketing</li>
+                      <li>24/7 Dedicated Support</li>
+                      <li>Custom Strategy Development</li>
+                      <li>Weekly Strategy Calls</li>
+                    </ul>
+                    <div class="btn-wrapper">
+                      <a href="contact.html" class="rr-btn">
+                        <span class="btn-wrap">
+                          <span class="text-one">Get Started</span>
+                          <span class="text-two">Get Started</span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="brands-4-wrapper-box fade-anim">
+                <div class="brands-4-wrapper">
+                  <div class="swiper brand-4-slider-active">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="brand-4-box">
+                          <img src="assets/imgs/brand/brand-1.webp" alt="image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="brand-4-box">
+                          <img src="assets/imgs/brand/brand-2.webp" alt="image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="brand-4-box">
+                          <img src="assets/imgs/brand/brand-3.webp" alt="image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="brand-4-box">
+                          <img src="assets/imgs/brand/brand-4.webp" alt="image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="brand-4-box">
+                          <img src="assets/imgs/brand/brand-5.webp" alt="image">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- pricing-area end -->
+
+        <!-- blog area start -->
+        <section class="blog-area">
+          <div class="container rr-container-1410">
+            <div class="blog-area-inner section-spacing">
+              <div class="blog-header fade-anim">
+                <div class="section-title-wrapper">
+                  <div class="title-wrapper">
+                    <h2 class="section-title">Our Insight Latest News</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="blog-wrapper-box fade-anim">
+                <article class="blog-featured">
+                  <div class="thumb">
+                    <a href="blog-details.html"><img src="assets/imgs/blog/blog-1.webp" alt="blog image"></a>
+                  </div>
+                  <div class="content">
+                    <div class="meta">
+                      <span class="tag">Technology</span>
+                      <span class="date">Dec 15, 2024</span>
+                    </div>
+                    <h2 class="title"><a href="blog-details.html">The Future of Digital Marketing in 2025</a>
+                    </h2>
+                    <p class="text">Explore the latest trends and strategies in digital marketing that will shape the industry in the coming year.</p>
+                    <a href="blog-details.html" class="blog-btn">Read Details <i
+                        class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                </article>
+                <div class="blog-wrapper">
+                  <article class="blog">
+                    <div class="thumb">
+                      <a href="blog-details.html"><img src="assets/imgs/blog/blog-2.webp" alt="blog image"></a>
+                    </div>
+                    <div class="content">
+                      <div class="meta">
+                        <span class="tag">Technology</span>
+                        <span class="date">Dec 15, 2024</span>
+                      </div>
+                      <h2 class="title"><a href="blog-details.html">AI-Powered Business Solutions</a>
+                      </h2>
+                      <p class="text">How artificial intelligence is transforming business operations and customer experiences.</p>
+                      <a href="blog-details.html" class="blog-btn">Read Details <i
+                          class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                  </article>
+                  <article class="blog">
+                    <div class="thumb">
+                      <a href="blog-details.html"><img src="assets/imgs/blog/blog-3.webp" alt="blog image"></a>
+                    </div>
+                    <div class="content">
+                      <div class="meta">
+                        <span class="tag">Technology</span>
+                        <span class="date">Dec 15, 2024</span>
+                      </div>
+                      <h2 class="title"><a href="blog-details.html">Cybersecurity Best Practices</a>
+                      </h2>
+                      <p class="text">Essential cybersecurity measures every business should implement to protect their data.</p>
+                      <a href="blog-details.html" class="blog-btn">Read Details <i
+                          class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                  </article>
+                  <article class="blog">
+                    <div class="thumb">
+                      <a href="blog-details.html"><img src="assets/imgs/blog/blog-4.webp" alt="blog image"></a>
+                    </div>
+                    <div class="content">
+                      <div class="meta">
+                        <span class="tag">Technology</span>
+                        <span class="date">Dec 15, 2024</span>
+                      </div>
+                      <h2 class="title"><a href="blog-details.html">Cloud Migration Strategies</a>
+                      </h2>
+                      <p class="text">A comprehensive guide to successfully migrating your business infrastructure to the cloud.</p>
+                      <a href="blog-details.html" class="blog-btn">Read Details <i
+                          class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- blog area end -->
+
+      </main>
+
+      <!-- footer area start -->
+      <footer class="footer-area">
+        <div class="footer-widget-wrapper-box">
+          <div class="container rr-container-1410">
+            <div class="footer-widget-wrapper">
+              <div class="footer-widget-box">
+                <div class="footer-logo">
+                  <a href="index1.html"><img src="assets/imgs/logo/logo-light.png" alt="image"></a>
+                </div>
+                <div class="footer-text">
+                  <p class="text">We are passionate about empowering businesses through innovative and reliable IT and digital marketing solutions.</p>
+                </div>
+                <div class="footer-social">
+                  <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="https://x.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+              <div class="footer-widget-box">
+                <h2 class="footer-widget-title">Contact Us</h2>
+                <ul class="footer-meta-list">
+                  <li><span class="icon"><i class="fa-solid fa-location-dot"></i></span><span class="text">123 Business Park, Suite 500<br>San Francisco, CA 94107</span></li>
+                  <li><span class="icon"><i class="fa-solid fa-phone"></i></span><span class="text"> Call Us : <a href="">+1 (555) 987-6543</a></span>
+                  </li>
+                  <li><span class="icon"><i class="fa-solid fa-envelope"></i></span><span class="text"> Mail: <a href="mailto:info@egyriz.com">info@egyriz.com</a></span>
+                  </li>
+                  <li><span class="icon"><i class="fa-solid fa-clock"></i></span><span class="text"> Office : 8:00 AM - 7:00 PM</span></li>
+                </ul>
+              </div>
+              <div class="footer-widget-box">
+                <h2 class="footer-widget-title">Quick Links</h2>
+                <ul class="footer-nav-list">
+                  <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i>About Us</a></li>
+                  <li><a href="service.html"><i class="fa-solid fa-chevron-right"></i>Services</a></li>
+                  <li><a href="projects.html"><i class="fa-solid fa-chevron-right"></i>Portfolio</a></li>
+                  <li><a href="pricing.html"><i class="fa-solid fa-chevron-right"></i>Pricing</a></li>
+                  <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i>Contact</a></li>
+                </ul>
+              </div>
+              <div class="footer-widget-box">
+                <h2 class="footer-widget-title">Latest Posts</h2>
+                <div class="footer-blog-wrapper-box">
+                  <div class="footer-blog-wrapper">
+                    <article class="footer-blog">
+                      <div class="thumb">
+                        <a href="blog-details.html"><img src="assets/imgs/blog/blog-9.webp" alt="blog image"></a>
+                      </div>
+                      <div class="content">
+                        <div class="meta">
+                          <span class="date"><i class="fa-regular fa-clock"></i>15th Dec, 2025</span>
+                        </div>
+                        <h2 class="title"><a href="blog-details.html">The Future of AI</a>
+                        </h2>
+                        <a href="blog-details.html" class="blog-btn">Read More <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                      </div>
+                    </article>
+                    <article class="footer-blog">
+                      <div class="thumb">
+                        <a href="blog-details.html"><img src="assets/imgs/blog/blog-10.webp" alt="blog image"></a>
+                      </div>
+                      <div class="content">
+                        <div class="meta">
+                          <span class="date"><i class="fa-regular fa-clock"></i>15th Dec, 2025</span>
+                        </div>
+                        <h2 class="title"><a href="blog-details.html">Digital Trends 2025</a>
+                        </h2>
+                        <a href="blog-details.html" class="blog-btn">Read More <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-newsletter-box">
+          <div class="container rr-container-1410">
+            <div class="footer-newsletter-wrapper">
+              <div class="footer-newsletter-content">
+                <div class="icon">
+                  <img src="assets/imgs/icon/icon-26.webp" alt="image">
+                </div>
+                <div class="content">
+                  <h3 class="title">Sign Up To Our Newsletters.</h3>
+                  <p class="text">Subscribe to our Newsletter & Event Right Now to be Updated</p>
+                </div>
+              </div>
+              <div class="footer-newsletter-form">
+                <form action="#" class="footer-subscribe-form">
+                  <div class="input-field">
+                    <input type="email" placeholder="Enter Your Email">
+                    <button type="submit" class="rr-btn">
+                      <span class="btn-wrap">
+                        <span class="text-one">Subscribe Now</span>
+                        <span class="text-two">Subscribe Now</span>
+                      </span>
+                    </button>
+                  </div>
                 </form>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">+ MEET OUR TEAM</span>
-                <h2 class="section-title">Modernize Your IT, Maximize Your Business Potential</h2>
-                <p class="section-description">Our team of experts is ready to help you achieve your business goals.</p>
+        <div class="copyright-area">
+          <div class="container rr-container-1410">
+            <div class="copyright-area-inner">
+              <div class="copyright-text">
+                <p class="text">Copyright @ 2025 By <a href="#">Egyriz Solutions</a>. All Rights Reserved.</p>
+              </div>
+              <div class="copyright-link">
+                <a href="contact.html">Privacy policy</a>
+                <a href="contact.html">Terms of use</a>
+                <a href="contact.html">Site map</a>
+              </div>
             </div>
-            
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>James Anderson</h3>
-                    <p class="team-role">CEO & Founder</p>
-                    <p class="team-bio">With over 15 years in the IT industry, James leads our strategic vision.</p>
-                    <div class="team-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Sarah Mitchell</h3>
-                    <p class="team-role">CTO</p>
-                    <p class="team-bio">Sarah oversees all technical operations and innovation initiatives.</p>
-                    <div class="team-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Robert Chen</h3>
-                    <p class="team-role">Head of Development</p>
-                    <p class="team-bio">Robert manages our software development teams and projects.</p>
-                    <div class="team-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Emily Watson</h3>
-                    <p class="team-role">Cybersecurity Director</p>
-                    <p class="team-bio">Emily ensures our clients' systems are protected from threats.</p>
-                    <div class="team-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
+      </footer>
+      <!-- footer area end -->
 
-    <!-- Pricing Section -->
-    <section class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">+ OUR PRICING PLANS</span>
-                <h2 class="section-title">Affordable Pricing Packages</h2>
-                <p class="section-description">Choose the plan that best fits your business needs and budget.</p>
-            </div>
-            
-            <div class="pricing-plans">
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h3>Basic Plan</h3>
-                        <div class="plan-price">
-                            <span class="price">$1,000</span>
-                            <span class="period">/month</span>
-                        </div>
-                        <p class="billing-info">Billed Annually</p>
-                    </div>
-                    <div class="plan-features">
-                        <p><strong>Up To 3 Platforms</strong></p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Social Media Management</li>
-                            <li><i class="fas fa-check"></i> 8 Monthly Social Media Posts</li>
-                            <li><i class="fas fa-check"></i> SEO Strategy & Keyword Research</li>
-                            <li><i class="fas fa-check"></i> Google Ads & Social Media Ad Campaigns</li>
-                            <li><i class="fas fa-check"></i> Monthly Analytics And Performance Report</li>
-                            <li><i class="fas fa-check"></i> Bi-Weekly Strategy Call</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="btn btn-outline btn-block">Get Started</a>
-                </div>
-                
-                <div class="plan-card featured">
-                    <div class="plan-badge">Most Popular</div>
-                    <div class="plan-header">
-                        <h3>Standard Package</h3>
-                        <div class="plan-price">
-                            <span class="price">$2,500</span>
-                            <span class="period">/month</span>
-                        </div>
-                        <p class="billing-info">Billed Annually</p>
-                    </div>
-                    <div class="plan-features">
-                        <p><strong>Up To 7 Platforms</strong></p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Social Media Management</li>
-                            <li><i class="fas fa-check"></i> 8 Monthly Social Media Posts</li>
-                            <li><i class="fas fa-check"></i> SEO Strategy & Keyword Research</li>
-                            <li><i class="fas fa-check"></i> Google Ads & Social Media Ad Campaigns</li>
-                            <li><i class="fas fa-check"></i> Monthly Analytics And Performance Report</li>
-                            <li><i class="fas fa-check"></i> Bi-Weekly Strategy Call</li>
-                            <li><i class="fas fa-check"></i> Priority Support</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-block">Get Started</a>
-                </div>
-                
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h3>Premium Package</h3>
-                        <div class="plan-price">
-                            <span class="price">$5,000</span>
-                            <span class="period">/month</span>
-                        </div>
-                        <p class="billing-info">Billed Annually</p>
-                    </div>
-                    <div class="plan-features">
-                        <p><strong>Unlimited Platforms</strong></p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Social Media Management</li>
-                            <li><i class="fas fa-check"></i> 8 Monthly Social Media Posts</li>
-                            <li><i class="fas fa-check"></i> SEO Strategy & Keyword Research</li>
-                            <li><i class="fas fa-check"></i> Google Ads & Social Media Ad Campaigns</li>
-                            <li><i class="fas fa-check"></i> Monthly Analytics And Performance Report</li>
-                            <li><i class="fas fa-check"></i> Bi-Weekly Strategy Call</li>
-                            <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
-                            <li><i class="fas fa-check"></i> 24/7 Emergency Support</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="btn btn-outline btn-block">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- Blog Section -->
-    <section class="blog">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">+ LATEST BLOG INSIGHTS</span>
-                <h2 class="section-title">Our Insight Latest News</h2>
-                <p class="section-description">Stay updated with the latest trends and insights in IT and business technology.</p>
-            </div>
-            
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <div class="blog-category">
-                        <span>Technology</span>
-                        <span class="blog-date">Dec 15, 2024</span>
-                    </div>
-                    <div class="blog-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <h3>Lessons Learned And Continuous Improvement</h3>
-                        <p>Our Dedicated Support Team Is Available 24/7 To Resolve Your Technical Issues. From Troubleshooting Hardware And Software Problems.</p>
-                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="blog-card">
-                    <div class="blog-category">
-                        <span>Security</span>
-                        <span class="blog-date">Dec 10, 2024</span>
-                    </div>
-                    <div class="blog-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <h3>Cybersecurity Trends for 2025</h3>
-                        <p>Explore the latest cybersecurity threats and how to protect your business from emerging risks.</p>
-                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="blog-card">
-                    <div class="blog-category">
-                        <span>Cloud</span>
-                        <span class="blog-date">Dec 5, 2024</span>
-                    </div>
-                    <div class="blog-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <h3>Cloud Migration Best Practices</h3>
-                        <p>Learn how to successfully migrate your business to the cloud with minimal disruption.</p>
-                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="footer-logo">MEDO</div>
-                    <p class="footer-about">We are dedicated to building long-term partnerships with our clients, ensuring their success.</p>
-                    <div class="footer-contact">
-                        <p><i class="fas fa-map-marker-alt"></i> 34 Elm Street, Suite 500</p>
-                        <p><i class="fas fa-phone"></i> +1 (555) 941-0000</p>
-                        <p><i class="fas fa-envelope"></i> info@synvosolutions.com</p>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Our Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Managed IT Services</a></li>
-                        <li><a href="#">Database Solution</a></li>
-                        <li><a href="#">App Development</a></li>
-                        <li><a href="#">Data Protection</a></li>
-                        <li><a href="#">Machine Learning</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Latest Posts</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Why Your Business Needs Cloud Solutions</a></li>
-                        <li><a href="#">Cybersecurity Essentials for Small Business</a></li>
-                        <li><a href="#">The Future of AI in Business</a></li>
-                        <li><a href="#">Digital Transformation Strategies</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Newsletter</h4>
-                    <p>Sign up to our newsletters. Get the latest updates and insights.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter Your Email" required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </form>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="copyright">
-                    <p>Copyright © 2024 By BootstrapMB. All Rights Reserved.</p>
-                </div>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
-                    <a href="#">Site Map</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
   <!-- Dependencies JS Files -->
   <script src="assets/js/jquery-3.6.0.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -727,103 +1326,7 @@
   <script src="assets/js/wow.min.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-    <script>
-        // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            if (mobileMenu) {
-                mobileMenu.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                });
-            }
-            
-            // Testimonial slider functionality
-            const testimonialCards = document.querySelectorAll('.testimonial-card');
-            const dots = document.querySelectorAll('.dot');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-            let currentSlide = 0;
-            
-            function showSlide(n) {
-                // Hide all slides
-                testimonialCards.forEach(card => {
-                    card.classList.remove('active');
-                });
-                dots.forEach(dot => {
-                    dot.classList.remove('active');
-                });
-                
-                // Show current slide
-                currentSlide = (n + testimonialCards.length) % testimonialCards.length;
-                testimonialCards[currentSlide].classList.add('active');
-                dots[currentSlide].classList.add('active');
-            }
-            
-            if (prevBtn && nextBtn) {
-                prevBtn.addEventListener('click', function() {
-                    showSlide(currentSlide - 1);
-                });
-                
-                nextBtn.addEventListener('click', function() {
-                    showSlide(currentSlide + 1);
-                });
-            }
-            
-            // Dot click events
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', function() {
-                    showSlide(index);
-                });
-            });
-            
-            // Project filter functionality
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const projectCards = document.querySelectorAll('.project-card');
-            
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    const filterValue = this.getAttribute('data-filter');
-                    
-                    // Show/hide project cards based on filter
-                    projectCards.forEach(card => {
-                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                });
-            });
-            
-            // Form submission
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    alert('Thank you for your appointment request! We will contact you shortly.');
-                    contactForm.reset();
-                });
-            }
-            
-            // Newsletter form submission
-            const newsletterForm = document.querySelector('.newsletter-form');
-            if (newsletterForm) {
-                newsletterForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const emailInput = this.querySelector('input[type="email"]');
-                    alert('Thank you for subscribing to our newsletter!');
-                    emailInput.value = '';
-                });
-            }
-        });
-    </script>
+
 </body>
+
 </html>
